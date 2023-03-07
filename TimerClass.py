@@ -1,7 +1,6 @@
 import time # Import the timekeeping library
 import keyboard
-# Initialize global variables
-runstat = False
+
 class TimerClass:
     def __init__(self, func, rate):
         self.func = func
@@ -10,7 +9,7 @@ class TimerClass:
         self.last_time = time.time()
 
     def run(self):
-        while runstat:
+        while True:
             now = time.time()
             elapsed = now-self.last_time
             if elapsed >= self.interval:
